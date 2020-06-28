@@ -1,50 +1,21 @@
+import 'package:bytebank/screens/transfer/list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-  home: Scaffold(
-    body: TransferList(),
-    appBar: AppBar(title: Text('Transfers'),),
-    floatingActionButton: FloatingActionButton(
-      child: Icon(Icons.add),
-    ),
-  ),
-));
+void main() => runApp(BytebankApp());
 
-
-class TransferList extends StatelessWidget {
+class BytebankApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        TransferItem(Transfer(100, '1000')),
-        TransferItem(Transfer(200, '0001')),
-        TransferItem(Transfer(300, '1001')),
-      ],
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.blue[600],
+        accentColor: Colors.blueAccent[600],
+        buttonTheme: ButtonThemeData(
+            buttonColor: Colors.blueAccent[600],
+            textTheme: ButtonTextTheme.primary),
+      ),
+      home: TransferList(),
     );
   }
-}
-class TransferItem extends StatelessWidget {
-  final Transfer _tranfer;
-
-  TransferItem(this._tranfer);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-        child: ListTile(
-            leading: Icon(Icons.monetization_on),
-            title: Text(this._tranfer.transferValue.toString()),
-            subtitle: Text(this._tranfer.accountNumber)
-        )
-    );
-  }
-}
-
-class Transfer {
-  final double transferValue;
-  final String accountNumber;
-
-  Transfer(this.transferValue, this.accountNumber);
-
 }
