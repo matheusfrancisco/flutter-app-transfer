@@ -9,7 +9,7 @@ import 'form.dart';
 const _titleAppBar = 'Transfer';
 
 class TransferList extends StatefulWidget {
-  final List<Transfer> _transfers = List();
+  final List<Transfer> _transfers = [];
 
   @override
   State<StatefulWidget> createState() {

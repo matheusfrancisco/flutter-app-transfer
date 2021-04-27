@@ -36,7 +36,7 @@ class FormTransfer extends State<TransferForm> {
                   title: _valueFieldAmmount['title'],
                   tip:  _valueFieldAmmount['tip'],
                   icon: Icons.monetization_on),
-              RaisedButton(
+              ElevatedButton(
                   onPressed: () => _createTransfer(context),
                   child: Text(_buttonText))
             ],
