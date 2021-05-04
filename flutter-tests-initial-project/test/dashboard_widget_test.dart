@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../lib/screens/dashboard.dart';
+import 'matchers.dart';
 
 void main() {
   testWidgets('Should display the main image when the Dashboard is opened',
@@ -39,9 +40,3 @@ void main() {
           });
 }
 
-bool featureItemMatcher(Widget widget, String name, IconData icon) {
-  if(widget is FeatureItem) {
-    return widget.name == name && widget.icon == icon;
-  }
-  return false;
-}
