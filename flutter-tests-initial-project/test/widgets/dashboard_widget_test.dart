@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../lib/screens/dashboard.dart';
-import 'matchers.dart';
+import 'package:bytebank/screens/dashboard.dart';
+import '../matchers/matchers.dart';
 
 void main() {
   testWidgets('Should display the main image when the Dashboard is opened',

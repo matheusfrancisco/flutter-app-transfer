@@ -1,9 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:bytebank/main.dart';
 
-import '../lib/models/transaction.dart';
+import 'package:bytebank/models/transaction.dart';
 
 void main() {
  test('Should return the value when create a transaction', () {
